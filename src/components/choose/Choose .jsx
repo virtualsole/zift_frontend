@@ -19,7 +19,7 @@ const Choose  = () => {
         >
           {/* <span className='gl-hero-lead-in mt-2'></span> */}
           <h1 className='container-8 mt-lg-3'>Why Choose Us</h1>
-            <p className='gl-hero-body chose_pera mb-lg-5'>The cryptocurrency industry has been volatile as well, with bitcoin going through several boom-and bust cycles.</p>
+            <p className='gl-hero-body chose_pera stak-sd'>The cryptocurrency industry has been volatile as well, with bitcoin going through several boom-and bust cycles.</p>
 
         </Col>
         <Col md={2}>
@@ -29,8 +29,7 @@ const Choose  = () => {
       </Row>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
+  
    
       <Card />
 

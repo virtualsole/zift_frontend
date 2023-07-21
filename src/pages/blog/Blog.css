@@ -35,6 +35,10 @@
   
   
 }
+.blog_heading {
+  font-size: 62px;
+
+}
 @media only screen and (max-width: 600px) {
 .blog_heading {
   font-size: 42px;

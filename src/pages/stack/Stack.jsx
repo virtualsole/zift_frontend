@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 // import React, {  } from 'react';
 
-import stackBg from '../../assets/colorful-bitcoin-illustration-neon-splash-removebg-preview.png'
+import stackBg from '../../assets/Staking_zift.png'
 import { FaRegCopy } from 'react-icons/fa'
 import { toast } from 'react-toastify';
 import './Stack.css'
@@ -291,14 +291,14 @@ const Stack = () => {
     <section className='bg_stak'>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-6 col-sm-12 mt-lg-5 p-lg-5">
+          <div className="col-lg-6 col-sm-12 mt-lg-5 p-lg-4">
             <span className='text-light fs-1 fw-bold mb-lg-5 stak-sd' data-aos="fade-right"
               data-aos-easing="linear"
               data-aos-duration="3000">Staking</span>
 
             <p className='text-light mt-lg-3 stak-sd'>Sacred Farms offer multiple farming opportunities to you. Get double rewards by staking your HPG tokens in return for additional HPG tokens and earning high income.</p>
 
-            <button className="btn btn-outline-warning stak-sd mt-2" data-aos="fade-left"
+            <button className="btn btn2 stak-sd mt-2" data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="3000">Learn how to start</button>
           </div>

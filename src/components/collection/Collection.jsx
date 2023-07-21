@@ -37,7 +37,7 @@ const Collection = () => {
     </Accordion>
                 </div>
                 <div className="col-lg-6 col-sm-12 pt-5 element">
-                <img className=' img-fluid ps-lg-4 rotate justify-content-center collection_gif ' src={Men} alt="" />
+                <img className=' img-fluid ps-lg-4 mt-lg-5 rotate justify-content-center collection_gif ' src={Men} alt="" />
                 </div>
             </div>
         </div>

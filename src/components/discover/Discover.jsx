@@ -19,7 +19,7 @@ const Discover = () => {
                 We have provided a very nice and user-friendly user interface of personal area for our partners which has been designed keeping in mind all the technologies and devices. With the help of which all users can easily 
                 </span>
                 <br></br>
-                <button className='btn btn-outline-warning mt-lg-3 discover-sd'>
+                <button className='btn btn2 mt-lg-3 discover-sd'>
                 Explore Now
             </button>
             </div>

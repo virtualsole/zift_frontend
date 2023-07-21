@@ -1,12 +1,24 @@
 /*  */
 
 .client-img {
-    transform: scale(0.6);
- 
+    /* transform: scale(0.6); */
+    width: 90px;
+    height: 90px;
     /* display: flex; */
 }
 
 .client-img:hover {
+    opacity: 0.65;
+}
+
+.client_img {
+    /* transform: scale(0.6); */
+    width: 65px;
+    height: 65px;
+    /* display: flex; */
+}
+
+.client_img:hover {
     opacity: 0.65;
 }
 

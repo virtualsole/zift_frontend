@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Future from '../../assets/image-14-copyright-1.jpg'
+import Future from '../../assets/scene-professional-esports-gamer-profile-colored-with-red-blue-light-generative-ai.jpg'
 import "./About.css"
 const About = () => {
   useEffect(() => {
@@ -7,15 +7,21 @@ const About = () => {
   },[])
   return (
     <section className='about-bg'>
-      <div className="container">
+      <div className="container p-5">
         <h1 className='mb-lg-5 about_heading'>About Us</h1>
         <div className="row mb-5">
-          <div className="col-lg-6 col-sm-12 mb-5"><img className='img-fluid' src={Future} alt="" /></div>
+          <div className="col-lg-6 col-sm-12 mb-5"><img className='img-fluid rounded' src={Future} alt="" height={484}/></div>
           <div className="col-lg-6 col-sm-12"  data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="3000"><h3 className='fs-1 text-light lh-3 mb-3'>
             We develop & sell digital NFT future</h3>
-            <span className='lh-1 text- text-light'>The market has a lot to do with determining the price of ZiftCoin. An increase in demand for cryptocurrencies or any other event that causes people’s enthusiasm for digital currency-related products and services may increase prices on these exchanges just as much.</span>
+            <span className='lh-1 text- text-light'>The market has a lot to do with determining the price of ZiftCoin. An increase in demand for cryptocurrencies or any other event that causes people’s enthusiasm for digital currency-related products and services may increase prices on these exchanges just as much.
+            </span>
+            <br></br>
+            <span className='lh-1 text- text-light'>The future of NFTs could incorporate just about anything, including written content, digital photos, music, etc. The capacity to adopt and the chance of transferring ownership rights, along with blockchain products, turn out to be the core benefits
+            </span>
+       
+            
           </div>
         </div>
         <div className="row mb-5">

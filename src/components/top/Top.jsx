@@ -1,10 +1,11 @@
 import React from 'react'
 import Add1 from '../../assets/Screenshot_2022-10-24_140105-removebg-preview.png'
 import Add2 from '../../assets/Screenshot_2022-10-24_140117-removebg-preview.png'
-import Add3 from '../../assets/Screenshot_2022-10-24_140133-removebg-preview.png'
+import Add3 from '../../assets/pngwing.com.png'
 import Add4 from '../../assets/Screenshot_2022-10-24_140144-removebg-preview.png'
-import Add5 from '../../assets/Screenshot_2022-10-24_140154-removebg-preview.png'
-import Add6 from '../../assets/Screenshot_2022-10-24_140144-removebg-preview.png'
+import Add5 from '../../assets/usd-coin-usdc-logo.png'
+
+import Add7 from '../../assets/logo_zift-removebg-preview.png'
 import './Top.css'
 const Top = () => {
   return (
@@ -15,7 +16,7 @@ const Top = () => {
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="3000"
             data-aos-easing="linear">
-                <h1 className='text-white lh-1 fs-1 mb-lg-3 bold top-sd'>
+                <h1 className='text-white lh-1 fs-1 mb-lg-3 mt-lg-5 bold top-sd'>
 Check our top
 clients & partners</h1>
             </div>
@@ -25,15 +26,16 @@ clients & partners</h1>
                 </span>
             </div>
         </div>
-        <div data-aos="zoom-in" data-aos-offset="400" className='row justify-content-between'>
+        <div data-aos="zoom-in" data-aos-offset="400" className='row justify-content-between mt-lg-4'>
             <div 
       className='col-lg-12 col-sm-6 col-md-12 d-sm-block d-lg-flex justify-content-between text-center'>
-            <img className='client-img' width={128} height={123} src={Add1} alt="" />
-            <img className='client-img' width={128} height={123} src={Add2} alt="" />
-            <img className='client-img' width={128} height={123} src={Add3} alt="" />
-            <img className='client-img' width={128} height={123} src={Add4} alt="" />
-            <img className='client-img' width={128} height={123} src={Add5} alt="" />
-            <img className='client-img' width={128} height={123} src={Add6} alt="" />
+            <img className='client-img' src={Add1} alt="" />
+            <img className='client-img' src={Add2} alt="" />
+            <img className='client_img mt-lg-3' src={Add3} alt="" />
+            <img className='client-img' src={Add4} alt="" />
+            <img className='client_img mt-lg-3' src={Add5} alt="" />
+          
+            <img className='client-img' src={Add7} alt="" />
            
             </div>
         </div>

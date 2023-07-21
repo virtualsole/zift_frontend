@@ -6,7 +6,7 @@ const History = () => {
   },[])
   return (
     <section className='history-bg'>
-      <div className="container">
+      <div className="container p-5">
         <h1 className='mb-lg-5 history_heading'>History</h1>
 
         <div className="row mb-lg-5">

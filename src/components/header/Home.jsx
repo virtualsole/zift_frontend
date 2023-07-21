@@ -25,7 +25,7 @@ const Home = () => {
         Buy and Sell Digital Art: ZIFT Collection</h1>
   
            <NavLink to='Bycoin'>
-           <button className="mt-3 mb-3 btn btn-outline-warning">Get ZiftCoin</button> 
+           <button className="mt-3 mb-3 btn btn2">Get ZiftCoin</button> 
                  </NavLink>
            <div className=" mb-3 bg-light"
            data-aos="fade-up"

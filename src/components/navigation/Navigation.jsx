@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../../assets/zift-coin-logo-2.png'
-import { Container } from 'react-bootstrap';
+
+import images from '../../assets/zift-coin-logo-2.png';
+
 import { Nav } from 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
+
 import { useSelector, useDispatch } from 'react-redux'
-import { LinkContainer } from 'react-router-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { CgMenuLeft } from 'react-icons/cg';
+import { AiOutlineClose } from 'react-icons/ai';
+
 
 import { loadWeb3 } from '../../connectivity/connectivity'
 import './Navigation.css'
@@ -14,98 +18,112 @@ import ziftCoinContractAbi from '../../contract/abis/ziftCoinContractAbi.json';
 import { tokenAdress, ziftCoinContractAddress } from '../../contract/addresses/address';
 import { updateWalletInfo } from '../../store/slice/wallet/walletSlice';
 import { toast } from 'react-toastify';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = () => {
-    const [scrolled, setScrolled] = useState(false);
-    const { isConnected, acc } = useSelector((state) => state.wallet)
-    const dispatch = useDispatch()
+  const [toggleMenu, setToggleMenu] = React.useState(false);
 
-    const handleScroll = () => {
-        const offset = window.scrollY
-        if (offset > 50) {
-            setScrolled(true)
-        } else {
-            setScrolled(false)
+// console.log('toggleMenu',toggleMenu)
+  const { isConnected, acc } = useSelector((state) => state.wallet)
+  const dispatch = useDispatch()
 
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-    }, []);
 
-    const getaccount = async () => {
-        try {
+  const getaccount = async () => {
+    let acc = await loadWeb3();
 
-            let acc = await loadWeb3();
-
-            if (acc == "No Wallet") {
-                toast.error('please install metamask')
-            }
-            else if (acc == "Wrong Network") {
-                toast.error('Wrong Network connect to bsc Testnet')
-            } else {
-                dispatch(updateWalletInfo(acc))
-
-            }
-        } catch (error) {
-            console.error('error while connect ', error.message)
-        }
+    if (acc == "No Wallet") {
+      toast.error('please install metamask')
     }
+    else if (acc == "Wrong Network") {
+      toast.error('Wrong Network connect to binance testnet')
+    } else {
+      dispatch(updateWalletInfo(acc))
 
-    return (
-        <>
-            <Navbar collapseOnSelect expand="lg" className={`sticky bgs p-2 ${scrolled ? 'sticky-header' : ''}`}>
-                <Container>
-                    <LinkContainer to="/">
-                        <Nav.Link><Navbar.Brand>
-                            <img className='logo_image' src={Logo} alt="" />
 
-                        </Navbar.Brand></Nav.Link>
-                    </LinkContainer>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto justify-content-center flex-grow-1 pe-3">
-                            <LinkContainer to="/">
-                                <Nav.Link className="text-white center" href="./">Home</Nav.Link>
+    }
+  }
 
-                            </LinkContainer>
-                            <LinkContainer to="about">
-                                <Nav.Link className="text-white center" href="#">About Us</Nav.Link>
+  return (
+    <>
+      <nav className="app__navbar">
+        <div className="app__navbar-logo">
+          <img src={images} alt="app__logo" />
+        </div>
+        <ul className="app__navbar-links mt-lg-3">
+          <NavLink to="/">
+            <li className="p__opensans"><a href="#home">Home</a></li>
+          </NavLink>
+          <NavLink to="about">
+            <li className="p__opensans"><a href="#about">About Us</a></li>
+          </NavLink>
+          <NavLink to="history">
+            <li className="p__opensans"><a href="#menu">History</a></li>
+          </NavLink>
+          <NavLink to="blog">
+            <li className="p__opensans"><a href="#awards">Blog</a></li>
+          </NavLink>
+          <NavLink to="stack">
+            <li className="p__opensans"><a href="#awards">Staking</a></li>
+          </NavLink>
+          <NavLink to="contact">
+            <li className="p__opensans"><a href="#contact">Contact</a></li>
+          </NavLink>
+        </ul>
+        <div className="app__navbar-login">
+          <Nav.Link> <button className='btn btn2 me-2 btn_mob' onClick={getaccount}> {isConnected ? <>{walletShortFormer(acc)}</> : <>Connect Wallet</>}</button></Nav.Link>
 
-                            </LinkContainer>
-                            <LinkContainer to="history">
-                                <Nav.Link className="text-white center" href="#">History</Nav.Link>
+          <NavLink to="/Bycoin">
 
-                            </LinkContainer>
-                            <LinkContainer to="blog">
-                                <Nav.Link className="text-white center" href="#">Blog</Nav.Link>
+            <button className='btn btn2 btn-mob'>Let's Play</button>
+          </NavLink>
 
-                            </LinkContainer>
+          <NavLink to="/Bycoin">
 
-                            <LinkContainer to="stack">
-                                <Nav.Link className="text-white center" href="#">Staking</Nav.Link>
+            <button className='btn btn2 btn-mob'>Buy ZiftCoin</button>
+          </NavLink>
+        </div>
+        <div className="app__navbar-smallscreen">
+          <CgMenuLeft color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
+          {toggleMenu && (
+            <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+              <AiOutlineClose fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+              <ul className="app__navbar-smallscreen_links">
+                <NavLink to="/">
+                  <li><a onClick={() => setToggleMenu(false)}>Home</a></li>
+                </NavLink>
+                <NavLink to="about">
+                  <li><a onClick={() => setToggleMenu(false)}>About Us</a></li>
+                </NavLink>
+                <NavLink to="history">
+                  <li><a onClick={() => setToggleMenu(false)}>History</a></li>
+                </NavLink>
+                <NavLink to="blog">
+                  <li><a onClick={() => setToggleMenu(false)}>Blog</a></li>
+                </NavLink>
+                <NavLink to="stack">
+                  <li><a onClick={() => setToggleMenu(false)}>Staking</a></li>
+                </NavLink>
+                <NavLink to="contact">
+                  <li><a onClick={() => setToggleMenu(false)}>Contact</a></li>
+                </NavLink>
+                <NavLink to="Bycoin">
 
-                            </LinkContainer>
-                            <LinkContainer to="contact">
-                                <Nav.Link className="text-white center" href="#pricing">
-                                    Contact Us</Nav.Link>
-                            </LinkContainer>
-                        </Nav>
-                        <Nav.Link> <button className='btn btn-outline-warning me-2' onClick={getaccount}> {isConnected ? <>{walletShortFormer(acc)}</> : <>Connect Wallet</>}</button></Nav.Link>
+                <button className='btn btn2 stak-sd' onClick={() => setToggleMenu(false)}>Let's Play</button>
+                </NavLink>
 
-                        <LinkContainer
-                        Container to="ByCoin">
+                <NavLink to="Bycoin">
 
-                            <Nav.Link> <button className='btn btn-outline-warning'>Buy ZiftCoin</button></Nav.Link>
-                        </LinkContainer>
+                   <button className='btn btn2 stak-sd mt-3' onClick={() => setToggleMenu(false)} >Buy ZiftCoin</button>
+                </NavLink>
+              </ul>
+            </div>
+          )}
+        </div>
+      </nav>
 
-                    </Navbar.Collapse>
 
-                </Container>
-            </Navbar>
-
-        </>
-    )
+    </>
+  )
 }
 
 export default Navigation

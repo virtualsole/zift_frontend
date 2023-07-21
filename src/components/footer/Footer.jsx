@@ -1,5 +1,5 @@
 import React from 'react'
-import wipe from '../../assets/NFT-Market.gif'
+import wipe from '../../assets/zift-footer.png'
 import {SlEnvolope} from 'react-icons/sl'
 import {BsArrowRight} from 'react-icons/bs'
 import {FaFacebookF} from 'react-icons/fa'
