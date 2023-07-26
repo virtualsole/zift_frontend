@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Countdown from 'react-countdown';
 import { toast } from 'react-toastify';
 import { baseUrl } from '../../../../utils';
+import { tokenAdress, ziftCoinContractAddress } from '../../../../contract/addresses/address';
+import ziftCoinContractAbi from '../../../../contract/abis/ziftCoinContractAbi.json';
 import { updateStatus } from '../../../../store/slice/update';
 import PulseLoader from "react-spinners/PulseLoader";
 const Cards = ({ symbol, handleStake, setTotalClaimed, tokenBalance, isStake }) => {
@@ -119,7 +121,12 @@ const Cards = ({ symbol, handleStake, setTotalClaimed, tokenBalance, isStake }) 
   const claimed = async (id) => {
     try {
       setLoading(true)
-       await axios.put((`${baseUrl}/investments/${id}/calculateReward`))
+      const web3 = window.web3;
+      let ziftCoinContractInstance = new web3.eth.Contract(
+        ziftCoinContractAbi, ziftCoinContractAddress
+      );
+      let addresses = await ziftCoinContractInstance.methods.getReferralas(acc).call();
+      await axios.put(`${baseUrl}/investments/${id}/calculateReward`, { addresses: addresses })
       toast.success('calimed')
       checkUser()
       dispatch(updateStatus(!isUpdate))
