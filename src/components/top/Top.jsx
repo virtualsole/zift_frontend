@@ -27,14 +27,12 @@ clients & partners</h1>
             </div>
         </div>
         <div data-aos="zoom-in" data-aos-offset="400" className='row justify-content-between mt-lg-4'>
-            <div 
-      className='col-lg-12 col-sm-6 col-md-12 d-sm-block d-lg-flex justify-content-between text-center'>
+            <div className='col-lg-12 col-sm-6 d-block d-lg-flex justify-content-between text-center stak-sd'>
             <img className='client-img' src={Add1} alt="" />
             <img className='client-img' src={Add2} alt="" />
             <img className='client_img mt-lg-3' src={Add3} alt="" />
             <img className='client-img' src={Add4} alt="" />
             <img className='client_img mt-lg-3' src={Add5} alt="" />
-          
             <img className='client-img' src={Add7} alt="" />
            
             </div>
