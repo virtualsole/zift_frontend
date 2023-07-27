@@ -315,46 +315,50 @@ const Stack = () => {
           </div>
 
         </div>
-        <div className="border-stak2 mt-4 mb-5">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak ">
+        <div className="border-stak2 mt-4 mb-5 stack-sd">
+      
+         <div className="row stak-sdd">
+            <div className="col-lg-4 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak ">
               <span className='total_stack'>Total Staked</span>
               <br></br>
               <br></br>
               <span className='text-hpg'>{userInfo?.totalStaked} ZFT</span>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
+            <div className="col-lg-4 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
               <span className='total_stack'>Your Directs Bonus</span>
               <br></br>
               <br></br>
               <span className='text-hpg'>{isConnected ? <DirectReward address={acc} /> : 0} ZFT</span>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
+            <div className="col-lg-4 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
               <span className='total_stack'>Your Affiliate Reward
               </span>
               <br></br>
               <br></br>
               <span className='text-hpg'>{isConnected ? <AffiliateReward address={acc} /> : 0} ZFT</span>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
+            </div>
+            <div className="row stak-sdd">
+            <div className="col-lg-4 col-md-6 col-sm-12 mt-lg-4 p-lg-3 sm-stak">
               <span className='total_stack'>Claimed staking reward</span>
               <br></br>
               <br></br>
               <span className='text-hpg w-50'>{isConnected ? <Reward address={acc} /> : 0}  ZFT</span>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 p-lg-3 sm-stak mt-lg-2">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-lg-3 sm-stak mt-lg-2">
               <span className='total_stack'>Withdraw</span>
               <br></br>
               <br></br>
               <span className='text-hpg'>{isConnected ? <Withdrawed address={acc} /> : 0}  ZFT</span>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 p-lg-3 mt-lg-2">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-lg-3 mt-lg-2">
               <span className='total_stack'>Claimed, Directs & Affiliate</span>
               <br></br>
               <br></br>
               <span className='text-hpg'>{isConnected ? <AllReward address={acc} /> : 0} ZFT</span>
             </div>
           </div>
+        
           <h2 className='text-stack text-center mt-5'>Withdraw Directs and Affiliate Reward</h2>
           <div className="cta_stak mt-4">
             <button class="btn btn-outline-warning m-1" onClick={withdraw}>

@@ -147,6 +147,15 @@
 
 }
 
+
+.stak-sdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1200px) {
     .sponser {
         height: auto;

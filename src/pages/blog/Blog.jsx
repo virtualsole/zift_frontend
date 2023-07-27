@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap'
 import BlogFuture from '../../assets/WhatsApp-Image-2022-10-24-at-2.41.04-PM-1.jpeg'
 import BlogFuture2 from '../../assets/WhatsApp-Image-2022-10-24-at-2.41.03-PM-840x473.jpeg'
 import BlogFuture3 from '../../assets/PinInstagram.jpg'
-import BlogFuture4 from '../../assets/PinInstagram.jpg'
+import BlogFuture4 from '../../assets/ziftcoin 4-01.png'
 import BlogFuture5 from '../../assets/WhatsApp-Image-2022-10-24-at-2.40.47-PM.jpeg'
 import BlogFuture6 from '../../assets/WhatsApp-Image-2022-10-24-at-2.41.04-PM-1.jpeg'
 import './Blog.css'
@@ -22,14 +22,14 @@ const Blog = () => {
           <img className='img-fluid blog mb-5' src={BlogFuture} alt="" height={499} width={500}/>
           <span className='text-light fs-3 d-block'>Wake Up And Buy ZIFT</span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>May 14, 2020</span>
+          <span className='text-light p-1'>May 14, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
           <img className='img-fluid blog mb-5' src={BlogFuture2} alt="" height={499} width={500}/>
           <span className='text-light fs-3 d-block'>Get Free Zift Token</span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>May 14, 2020</span>
+          <span className='text-light p-1'>May 14, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
@@ -38,14 +38,14 @@ const Blog = () => {
           <img className='img-fluid blog mt-3 mb-5' src={BlogFuture3} alt="" height={499} width={500}/>
           <span className='text-light fs-3 d-block'>Zift Coin</span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>May 14, 2020</span>
+          <span className='text-light p-1'>May 14, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
           <img className='img-fluid blog mb-5' src={BlogFuture4} alt=""height={499} width={500} />
           <span className='text-light fs-3 d-block '>Long Term Use</span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>May 14, 2020</span>
+          <span className='text-light p-1'>May 14, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
@@ -53,7 +53,7 @@ const Blog = () => {
           <span className='text-light fs-3 d-block'>
 Future Investment</span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>May 14, 2020</span>
+          <span className='text-light p-1'>May 14, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
@@ -62,7 +62,7 @@ Future Investment</span>
           <span className='text-light fs-3 d-block'>ZIFT COIN Access
 </span>
           <div className="d-flex mb-3">
-          <span className='text-light p-1'>April 21, 2020</span>
+          <span className='text-light p-1'>April 21, 2023</span>
           <span className='text-light p-1'></span>
           <span className='text-light p-1'>0 Comments</span>
           </div>
@@ -89,7 +89,7 @@ Future Investment</span>
             <div className="col-8 mt-3">
             
           <span className='text-light p-1'>ANNOUNCEMENTS</span>
-          <span className='text-danger p-1'>May 14, 2020</span>
+          <span className='text-danger p-1'>May 14, 2023</span>
           <br></br>
           <span className='text-warning fs-5 '>Wake Up And Buy ZIFT</span>
         
@@ -102,7 +102,7 @@ Future Investment</span>
             <div className="col-8 mt-3">
             
           <span className='text-light p-1'>Blog</span>
-          <span className='text-danger p-1'>May 14, 2020</span>
+          <span className='text-danger p-1'>May 14, 2023</span>
           <br></br>
           <span className='text-warning fs-5 ms-1 '>Get Free Zift Token</span>
         

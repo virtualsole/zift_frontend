@@ -24,7 +24,7 @@ function NumberCounter({setLevel}) {
       </NavLink>
       <div className=' mx-auto level-container'>
         <button className="btn btn-outline-warning m-1" onClick={decrement}><BsArrowLeft /></button>
-        <span className='text-light fs-3 level_border'>{count}</span>
+        <span className='text-light fs-3 level_border'>Level : {count}</span>
         <button className="btn btn-outline-warning m-1" onClick={increment}><BsArrowRight /></button>
 
       </div>
